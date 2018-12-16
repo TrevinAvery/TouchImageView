@@ -674,8 +674,8 @@ public class TouchImageView extends AppCompatImageView {
         // big or too small, thus making the current zoom fall outside of an automatically-changing
         // minZoom and maxZoom).
         //
-        viewWidth = w;
-        viewHeight = h;
+        viewWidth = w - getPaddingLeft() - getPaddingRight();
+        viewHeight = h - getPaddingTop() - getPaddingBottom();
         fitImageToView();
     }
 
